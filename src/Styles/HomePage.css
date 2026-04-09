@@ -1,0 +1,109 @@
+@scope(.home){
+    :scope{
+        /* sizes */
+        width: 100vw;
+        /* flex */
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+    }
+    
+    @scope(.cards-container){
+        :scope{
+            /* sizes */
+            width: 100vw;
+            /* flex */
+            display: flex;
+            flex-direction: if(media(width > 768px):row;else:column);
+            justify-content: space-around;
+            gap: 25px;
+        }
+        /* cards */
+        @scope(.card){
+            :scope{
+                /* colors */
+                color: #FFFFFF;
+                /* radius */
+                border-radius: 20px;
+                corner-shape: squircle;
+                /* phone responsive */
+                width:if(media(width < 769px):50%); /* in this it was written 769px not 768px ;
+                because when it on 768px the width break the responsive */
+                margin:if(media(width < 769px):auto;else:none);/* in this it was written 769px not 768px ;
+                because when it on 768px the margin break the responsive */
+                /* another styles */
+                padding:
+                    if(
+                        media((width > 768px) and (width < 825px)):0.5vw;
+                        media((width > 825px) and (width < 1000px)):1vw;
+                        media((width > 1000px) and (width < 110px)):1.5vw;
+                        else:4vw
+                    )
+                ;   
+            }
+            button{
+                /* colors */
+                background: #FFFFFF22;
+                /* radius */
+                border-radius: 20px;
+                corner-shape: squircle;
+                /* another styles */
+                border: none;
+                padding: 10px;
+            }
+            .play-button-link{
+                /* colors */
+                color: white;
+                /* text styles */
+                text-decoration: none;
+            }
+        }
+        .easy{
+            /* colors */
+            background-color: #6CB4EE;
+        }
+        .normal{
+            /* colors */
+            background-color: #7BA05B;
+        }
+        .hard{
+            /* colors */
+            background-color: #FE6F5E;
+        }
+    }
+}
+
+/* footer */
+@scope(footer){
+    :scope{
+        /* colors & shadows */
+        background-color: #EEEEEE;
+        box-shadow: 0px 0px 10px #00000088;
+        /* another styles */
+        padding:0px;
+        margin:0px;
+    }
+    @scope(.list)
+    {
+        :scope{
+            /* flex */
+            display: flex;
+            /* another styles */
+            list-style: none;
+            padding: 0;
+            margin-right: 0;
+            p{
+                /* colors*/
+                color: gray;
+                /* text styles */
+                text-transform: uppercase;
+            }
+        }
+        @scope(ul){
+            :scope{      
+                /* list styles */          
+                list-style: none;
+            }
+        }
+    }
+}

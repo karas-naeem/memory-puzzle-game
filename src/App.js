@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import { Link, Route, Routes } from 'react-router-dom';
+import HomePage from './Components/HomePage';
 import './App.css';
+import './Styles/scroll.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/" className='link'>
+              home
+            </Link>
+          </li>
+          <li>
+            <Link to="/links" className='link'>
+              links
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className='link'>
+              about
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+          <Route path='/' element={<HomePage/>}/>
+      </Routes>
+     </div>
   );
 }
 
