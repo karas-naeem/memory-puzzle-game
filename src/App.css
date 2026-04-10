@@ -62,3 +62,11 @@ body{
     color: #FE6F5E;
   }
 }
+
+.footer-container{
+  width:100vw;
+  height:fit-content;
+  position:absolute;
+  bottom:0;
+}
+

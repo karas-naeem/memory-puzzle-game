@@ -73,37 +73,3 @@
     }
 }
 
-/* footer */
-@scope(footer){
-    :scope{
-        /* colors & shadows */
-        background-color: #EEEEEE;
-        box-shadow: 0px 0px 10px #00000088;
-        /* another styles */
-        padding:0px;
-        margin:0px;
-    }
-    @scope(.list)
-    {
-        :scope{
-            /* flex */
-            display: flex;
-            /* another styles */
-            list-style: none;
-            padding: 0;
-            margin-right: 0;
-            p{
-                /* colors*/
-                color: gray;
-                /* text styles */
-                text-transform: uppercase;
-            }
-        }
-        @scope(ul){
-            :scope{      
-                /* list styles */          
-                list-style: none;
-            }
-        }
-    }
-}

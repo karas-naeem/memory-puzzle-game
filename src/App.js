@@ -1,7 +1,10 @@
 import { Link, Route, Routes } from 'react-router-dom';
 import HomePage from './Components/HomePage';
+import Links from './Components/Links';
 import './App.css';
 import './Styles/scroll.css'
+import './Styles/selection.css'
+import About from './Components/About';
 
 function App() {
   return (
@@ -27,6 +30,8 @@ function App() {
       </nav>
       <Routes>
           <Route path='/' element={<HomePage/>}/>
+          <Route path='/links' element={<Links/>}/>
+          <Route path='/about' element={<About/>}/>
       </Routes>
      </div>
   );
