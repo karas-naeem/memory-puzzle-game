@@ -21,34 +21,34 @@
         /* cards */
         @scope(.card){
             :scope{
+                /* sizes */
+                width:if(media(width < 769px):50%); /* in this it was written 769px not 768px ;
+                because when it on 768px the width break the responsive */
                 /* colors */
                 color: #FFFFFF;
                 /* radius */
                 border-radius: 20px;
                 corner-shape: squircle;
-                /* phone responsive */
-                width:if(media(width < 769px):50%); /* in this it was written 769px not 768px ;
-                because when it on 768px the width break the responsive */
+                /* padding & margin */
+                padding:
+                if(
+                    media((width > 768px) and (width < 825px)):0.5vw;
+                    media((width > 825px) and (width < 1000px)):1vw;
+                    media((width > 1000px) and (width < 110px)):1.5vw;
+                    else:4vw
+                );   
                 margin:if(media(width < 769px):auto;else:none);/* in this it was written 769px not 768px ;
                 because when it on 768px the margin break the responsive */
-                /* another styles */
-                padding:
-                    if(
-                        media((width > 768px) and (width < 825px)):0.5vw;
-                        media((width > 825px) and (width < 1000px)):1vw;
-                        media((width > 1000px) and (width < 110px)):1.5vw;
-                        else:4vw
-                    )
-                ;   
             }
             button{
                 /* colors */
                 background: #FFFFFF22;
+                /* border */
+                border: none;
                 /* radius */
                 border-radius: 20px;
                 corner-shape: squircle;
-                /* another styles */
-                border: none;
+                /* padding */
                 padding: 10px;
             }
             .play-button-link{

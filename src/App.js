@@ -5,6 +5,7 @@ import './App.css';
 import './Styles/scroll.css'
 import './Styles/selection.css'
 import About from './Components/About';
+import NotFound from './Components/NotFound';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path='/' element={<HomePage/>}/>
           <Route path='/links' element={<Links/>}/>
           <Route path='/about' element={<About/>}/>
+          <Route path='*'  element={<NotFound/>}/>
       </Routes>
      </div>
   );

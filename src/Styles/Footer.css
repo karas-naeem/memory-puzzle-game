@@ -7,7 +7,7 @@
         /* colors & shadows */
         background-color: #EEEEEE;
         box-shadow: 0px 0px 10px #00000088;
-        /* another styles */
+        /* padding & margin */
         padding:0px;
         margin:0px;
     }
@@ -16,10 +16,11 @@
         :scope{
             /* flex */
             display: flex;
-            /* another styles */
-            list-style: none;
+            /* padding & margin */
             padding: 0;
             margin-right: 0;
+            /* list styles */
+            list-style: none;
             p{
                 /* colors*/
                 color: gray;
