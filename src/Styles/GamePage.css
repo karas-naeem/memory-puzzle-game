@@ -1,0 +1,31 @@
+@scope(.GamePage) {
+    :scope {
+        /* margin & padding */
+        margin: 25px;
+        padding: 5px;
+        /* fonts */
+        font-size: 30px;
+    }
+
+    @scope(.PicsContainer) {
+        :scope {
+            /* sizes */
+            height: fit-content;
+            /* grid */
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        div {
+            /* flex */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* radius */
+            border-radius: 5px;
+            corner-shape: squircle;
+        }
+    }
+}

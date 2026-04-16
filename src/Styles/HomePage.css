@@ -1,28 +1,31 @@
-@scope(.home){
-    :scope{
+@scope(.home) {
+    :scope {
         /* sizes */
         width: 100vw;
+        height: if(media(width < 768px):185vh);
         /* flex */
         display: flex;
         flex-direction: column;
         gap: 5vh;
     }
-    
-    @scope(.cards-container){
-        :scope{
+
+    @scope(.cards-container) {
+        :scope {
             /* sizes */
             width: 100vw;
             /* flex */
             display: flex;
-            flex-direction: if(media(width > 768px):row;else:column);
+            flex-direction: if(media(width > 768px):row; else:column);
             justify-content: space-around;
             gap: 25px;
         }
+
         /* cards */
-        @scope(.card){
-            :scope{
+        @scope(.card) {
+            :scope {
                 /* sizes */
-                width:if(media(width < 769px):50%); /* in this it was written 769px not 768px ;
+                width: if(media(width < 769px):50%);
+                /* in this it was written 769px not 768px ;
                 because when it on 768px the width break the responsive */
                 /* colors */
                 color: #FFFFFF;
@@ -31,16 +34,18 @@
                 corner-shape: squircle;
                 /* padding & margin */
                 padding:
-                if(
-                    media((width > 768px) and (width < 825px)):0.5vw;
-                    media((width > 825px) and (width < 1000px)):1vw;
-                    media((width > 1000px) and (width < 110px)):1.5vw;
-                    else:4vw
-                );   
-                margin:if(media(width < 769px):auto;else:none);/* in this it was written 769px not 768px ;
+                    if(media((width > 768px) and (width < 825px)):1px;
+                        media((width >=825px) and (width < 1000px)):1vw;
+                        media((width > 1000px) and (width < 110px)):1.5vw;
+                        else:4vw);
+                padding-top: 4vh;
+                padding-bottom: 4vh;
+                margin: if(media(width < 769px):auto; else:none);
+                /* in this it was written 769px not 768px ;
                 because when it on 768px the margin break the responsive */
             }
-            button{
+
+            button {
                 /* colors */
                 background: #FFFFFF22;
                 /* border */
@@ -51,25 +56,28 @@
                 /* padding */
                 padding: 10px;
             }
-            .play-button-link{
+
+            .play-button-link {
                 /* colors */
                 color: white;
                 /* text styles */
                 text-decoration: none;
             }
         }
-        .easy{
+
+        .easy {
             /* colors */
             background-color: #6CB4EE;
         }
-        .normal{
+
+        .normal {
             /* colors */
             background-color: #7BA05B;
         }
-        .hard{
+
+        .hard {
             /* colors */
             background-color: #FE6F5E;
         }
     }
 }
-

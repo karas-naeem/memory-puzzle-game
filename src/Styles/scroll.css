@@ -1,12 +1,14 @@
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     /* sizes */
     width: 5px;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     /* colors */
     background-color: #EEEEEE;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     /* colors */
     background-color: #444;
     /* radius */

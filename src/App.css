@@ -1,4 +1,4 @@
-body{
+body {
   /* sizes */
   width: 100vw;
   height: 100vh;
@@ -8,7 +8,7 @@ body{
   align-items: center;
   /* text styles */
   text-align: center;
-  font-family:bricolage-grotesque;
+  font-family: bricolage-grotesque;
   text-transform: capitalize;
   /* another styles*/
   overflow-x: hidden;
@@ -19,7 +19,7 @@ body{
 /* nav styles */
 
 @scope(nav) {
-  :scope{
+  :scope {
 
     /* sizes */
     width: 50vw;
@@ -33,8 +33,9 @@ body{
     /* another styles */
     padding: 25px;
     margin: auto;
-    }
-  ul{
+  }
+
+  ul {
     /* sizes */
     width: 100%;
     /* flex */
@@ -46,7 +47,7 @@ body{
     padding: 0;
     margin: 0;
   }
-}  
+}
 
 .link {
   /* colors */
@@ -55,18 +56,10 @@ body{
   text-decoration: none;
   /* another styles*/
   cursor: pointer;
-  
+
   /* pseudo classes */
-  &:hover{
+  &:hover {
     /* colors */
     color: #FE6F5E;
   }
 }
-
-.footer-container{
-  width:100vw;
-  height:fit-content;
-  position:absolute;
-  bottom:0;
-}
-

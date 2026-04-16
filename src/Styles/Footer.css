@@ -1,19 +1,22 @@
 /* footer */
-@scope(footer){
-    :scope{
+@scope(footer) {
+    :scope {
         /* sizes */
         width: 100vw;
         height: 20vh;
+        /* positions */
+        position: fixed;
+        top: 80%;
         /* colors & shadows */
         background-color: #EEEEEE;
         box-shadow: 0px 0px 10px #00000088;
         /* padding & margin */
-        padding:0px;
-        margin:0px;
+        padding: 0px;
+        margin: 0px;
     }
-    @scope(.list)
-    {
-        :scope{
+
+    @scope(.list) {
+        :scope {
             /* flex */
             display: flex;
             /* padding & margin */
@@ -21,16 +24,18 @@
             margin-right: 0;
             /* list styles */
             list-style: none;
-            p{
+
+            p {
                 /* colors*/
                 color: gray;
                 /* text styles */
                 text-transform: uppercase;
             }
         }
-        @scope(ul){
-            :scope{      
-                /* list styles */          
+
+        @scope(ul) {
+            :scope {
+                /* list styles */
                 list-style: none;
             }
         }

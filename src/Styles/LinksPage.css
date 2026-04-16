@@ -3,6 +3,7 @@
     :scope{
         /* sizes */
         width: 100vw;
+        height: if(media(width <= 768px):105vh);
         /* flex */
         display: flex;
         flex-direction: column;

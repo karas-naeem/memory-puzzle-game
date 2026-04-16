@@ -6,6 +6,7 @@ import './Styles/scroll.css'
 import './Styles/selection.css'
 import About from './Components/About';
 import NotFound from './Components/NotFound';
+import Game from './Components/Game';
 
 function App() {
   return (
@@ -30,12 +31,29 @@ function App() {
         </ul>
       </nav>
       <Routes>
-          <Route path='/' element={<HomePage/>}/>
-          <Route path='/links' element={<Links/>}/>
-          <Route path='/about' element={<About/>}/>
-          <Route path='*'  element={<NotFound/>}/>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/links' element={<Links />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/game/:type' element={<Game />} />
+        <Route path='*' element={
+          <NotFound
+            suggestionsText="Oops! page is not found. often you write URL wrong.you can switch to one of them pages:"
+            suggestions={[
+              {
+                name: "Home Page",
+                link: "/"
+              },
+              {
+                name: "Links",
+                link: "/Links"
+              },
+              {
+                name: "About",
+                link: "about"
+              }
+            ]} />} />
       </Routes>
-     </div>
+    </div>
   );
 }
 
