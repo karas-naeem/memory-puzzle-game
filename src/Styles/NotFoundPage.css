@@ -1,4 +1,4 @@
-@scope(.NotFoundPage) {
+@scope(.notFoundPage) {
     :scope {
         /* sizes */
         width: 100vw;

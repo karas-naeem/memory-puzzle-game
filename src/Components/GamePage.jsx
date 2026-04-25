@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
-import NotFound from "./NotFound"
+import NotFound from "./NotFoundPage"
 import "../Styles/GamePage.css"
 
 export default function Game() {
@@ -216,13 +216,13 @@ export default function Game() {
     /* component */
     if (type === "easy" || type === "normal" || type === "hard") {
         return (
-            <div className="GamePage">
+            <div className="gamePage">
                 {
                     openedBox.length === generatePuzzle.current.length ?
                         <span>
                             you win!
                         </span> : timer >= 0 ? <span style={{
-                            color: timer <= 20 ? "#F00" : "#00"
+                            color: timer <= 20 ? "#F00" : "#000"
                         }}>
                             {
                                 Math.floor(timer / 60)
@@ -236,7 +236,8 @@ export default function Game() {
                                 Math.floor(timer % 60)
                             }
                         </span> : <span style={{
-                            fontSize: "30px"
+                            fontSize: "30px",
+                            color:"#F00",
                         }}>
                             you lose!
                         </span>

@@ -1,4 +1,4 @@
-@scope(.GamePage) {
+@scope(.gamePage) {
     :scope {
         /* margin & padding */
         margin: 25px;
@@ -26,6 +26,8 @@
             /* radius */
             border-radius: 5px;
             corner-shape: squircle;
+            /* margin */
+            margin: auto;
         }
     }
 }

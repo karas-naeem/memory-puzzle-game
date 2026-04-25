@@ -4,7 +4,7 @@ import '../Styles/HomePage.css';
 
 export default function HomePage() {
     return (
-        <div className='home'>
+        <div className='homePage'>
             <h1>memory puzzle game</h1>
             <div className='content'>
                 <p>select a level:</p>
@@ -12,7 +12,7 @@ export default function HomePage() {
                     <div className='card easy'>
                         <h2>easy</h2>
                         <p>
-                            in this level, the game be 4x4
+                           in this level, the game be 4x4
                         </p>
                         <button>
                             <Link to="/game/easy" className='play-button-link'>
@@ -23,7 +23,7 @@ export default function HomePage() {
                     <div className='card normal'>
                         <h2>normal</h2>
                         <p>
-                            in this level, the game be 6x6
+                           in this level, the game be 6x6
                         </p>
                         <button>
                             <Link to="/game/normal" className='play-button-link'>
@@ -34,7 +34,7 @@ export default function HomePage() {
                     <div className='card hard'>
                         <h2>hard</h2>
                         <p>
-                            in this level, the game be 10x10
+                           in this level, the game be 8x8
                         </p>
                         <button>
                             <Link to="/game/hard" className='play-button-link'>

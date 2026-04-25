@@ -7,8 +7,8 @@ export default function NotFound({
     suggestions
 }) {
     return (
-        <div className="NotFoundPage">
-            <h1>404 | pag not found</h1>
+        <div className="notFoundPage">
+            <h1>404 | page not found</h1>
             <div className="content">
                 <p>
                     {suggestionsText}

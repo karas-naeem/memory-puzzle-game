@@ -1,8 +1,8 @@
-@scope(.home) {
+@scope(.homePage) {
     :scope {
         /* sizes */
         width: 100vw;
-        height: if(media(width < 768px):185vh);
+        height: if(media(width <= 768px):185vh);
         /* flex */
         display: flex;
         flex-direction: column;

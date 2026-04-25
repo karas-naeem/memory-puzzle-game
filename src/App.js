@@ -1,35 +1,19 @@
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import HomePage from './Components/HomePage';
-import Links from './Components/Links';
+import Links from './Components/LinksPage';
+import About from './Components/AboutPage';
+import NotFound from './Components/NotFoundPage';
+import Game from './Components/GamePage';
+import NavBar from './Components/NavBar';
 import './App.css';
 import './Styles/scroll.css'
 import './Styles/selection.css'
-import About from './Components/About';
-import NotFound from './Components/NotFound';
-import Game from './Components/Game';
 
 function App() {
+
   return (
     <div className="App">
-      <nav>
-        <ul>
-          <li>
-            <Link to="/" className='link'>
-              home
-            </Link>
-          </li>
-          <li>
-            <Link to="/links" className='link'>
-              links
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className='link'>
-              about
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <NavBar/>
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/links' element={<Links />} />
@@ -49,7 +33,7 @@ function App() {
               },
               {
                 name: "About",
-                link: "about"
+                link: "/about"
               }
             ]} />} />
       </Routes>
